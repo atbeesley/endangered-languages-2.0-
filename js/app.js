@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const newItemform = document.querySelector('#new-item-form');
-  newItemform.addEventListener('submit', handleNewItemFormSubmit);
+  const newItemForm = document.querySelector('#new-item-form');
+  newItemForm.addEventListener('submit', handleNewItemFormSubmit);
 
   const deleteAllButton = document.querySelector('#delete-all');
   deleteAllButton.addEventListener('click', handleDeleteAllClick);
@@ -9,33 +9,38 @@ document.addEventListener('DOMContentLoaded', () => {
 const handleNewItemFormSubmit = function (event) {
   event.preventDefault();
 
-  const readingListItem = createReadingListItem(event.target);
-  const readingList = document.querySelector('#reading-list');
-  readingList.appendChild(readingListItem);
+  const endangeredLanguage = createEndangeredLanguage(event.target);
+  const endangeredLanguages = document.querySelector('#endangered-languages');
+  endangeredLanguages.appendChild(endangeredLanguage);
 
   event.target.reset();
 }
 
-const createReadingListItem = function (form) {
-  const readingListItem = document.createElement('li');
-  readingListItem.classList.add('reading-list-item');
+const createEndangeredLanguage = function (form) {
+  const endangeredLanguage = document.createElement('li')
+  endangeredLanguage.classList.add('#endangered-language')
 
-  const title = document.createElement('h2');
-  title.textContent = form.title.value;
-  readingListItem.appendChild(title);
+const classification = document.createElement('h2');
+classification.textContent = form.classification.value;
+endangeredLanguage.appendChild(classification);
 
-  const author = document.createElement('h3');
-  author.textContent = form.author.value;
-  readingListItem.appendChild(author);
+const regionsSpoken = document.createElement('h3');
+regionsSpoken.textContent = form.regionsSpoken.value;
+endangeredLanguage.appendChild(regionsSpoken);
 
-  const category = document.createElement('p');
-  category.textContent = form.category.value;
-  readingListItem.appendChild(category);
+const numberOfSpeakers = document.createElement('p');
+numberOfSpeakers.textContent = form.numberOfSpeakers.value;
+endangeredLanguage.appendChild(numberOfSpeakers);
 
-  return readingListItem;
+const threatStatus = document.createElement('p');
+threatStatus.textContent = form.threatStatus.value;
+endangeredLanguage.appendChild(threatStatus);
+
+return endangeredLanguage;
+
 }
 
 const handleDeleteAllClick = function (event) {
-  const readingList = document.querySelector('#reading-list');
-  readingList.innerHTML = '';
+  const endangeredLanguages = document.querySelector('#endangered-languages');
+  endangeredLanguages.innerHTML = '';
 }
