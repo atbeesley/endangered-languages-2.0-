@@ -9,38 +9,38 @@ document.addEventListener('DOMContentLoaded', () => {
 const handleNewItemFormSubmit = function (event) {
   event.preventDefault();
 
-  const languageName = createLanguageName(event.target);
-  const endangeredLanguages = document.querySelector('#language-name');
-  endangeredLanguages.appendChild(languageName);
+  const endangeredLanguageItem = createEndangeredLanguageItem(event.target);
+  const endangeredLanguageList = document.querySelector('#endangered-languages-list');
+  endangeredLanguageList.appendChild(endangeredLanguageItem);
 
   event.target.reset();
 }
 
-const createLanguageName = function (form) {
-  const languageName = document.createElement('li')
-  languageName.classList.add('#language-name')
+const createEndangeredLanguageItem = function (form) {
+  const endangeredLanguageItem = document.createElement('li')
+  endangeredLanguageItem.classList.add('endangered-language-item')
 
 const classification = document.createElement('h2');
 classification.textContent = form.classification.value;
-languageName.appendChild(classification);
+  endangeredLanguageItem.appendChild(classification);
 
 const regionsSpoken = document.createElement('h3');
 regionsSpoken.textContent = form.regionsSpoken.value;
-languageName.appendChild(regionsSpoken);
+  endangeredLanguageItem.appendChild(regionsSpoken);
 
 const numberOfSpeakers = document.createElement('p');
 numberOfSpeakers.textContent = form.numberOfSpeakers.value;
-languageName.appendChild(numberOfSpeakers);
+  endangeredLanguageItem.appendChild(numberOfSpeakers);
 
 const threatStatus = document.createElement('p');
 threatStatus.textContent = form.threatStatus.value;
-languageName.appendChild(threatStatus);
+endangeredLanguageItem.appendChild(threatStatus);
 
-return languageName;
+return endangeredLanguageItem;
 
 }
 
 const handleDeleteAllClick = function (event) {
-  const endangeredLanguages = document.querySelector('#endangered-languages');
-  endangeredLanguages.innerHTML = '';
+  const endangeredLanguageList = document.querySelector('#endangered-languages-list');
+  endangeredLanguagesList.innerHTML = '';
 }
