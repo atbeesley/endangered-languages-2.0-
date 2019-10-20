@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<link rel="stylesheet" type="text/css" href="./css/main.css">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <form id="new-item-form">
-      <div id="form-wrapper">
-<div class="form-item">
-  <label for="language-name" class="primary">Language name</label>
-<input type="text" id="language-name" required/>
-</div>
-<div class="form-item">
-  <label for="classification" class="primary">Classification</label>
-<input type="text" id="classification" required/>
-</div>
-<div class="form-item">
-  <label for="regions-spoken" class="primary">Region(s) spoken</label>
-  <input type="text" id="regions-spoken" required/>
-</div>
-<div class="form-item">
-  <label for="number-of-speakers" class="primary">Number of speakers</label>
-  <input type="text" id="number-of-speakers" required/>
-</div>
-<div class="form-item">
-  <label for="threat-status" class="primary">Threat Status</label>
-  <select id="category">
-    <option value=" " disabled select></option>
-    <option value="endangered">Endangered</option>
-    <option value="seriously-endangered">Seriously endangered</option>
-    <option value="moribund">Moribund</option>
-    <option value="extinct">Extinct</option>
-  </select>
-
-
-</div>
+<link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <form id="new-item-form">
+    <div id="form-wrapper">
+      <div class="form-item">
+        <label for="language-name" class="primary">Language name</label>
+        <input type="text" id="language-name" required/>
       </div>
-      <input type="submit" value="submit"/>
+      <div class="form-item">
+        <label for="classification" class="primary">Classification</label>
+        <input type="text" id="classification" required/>
+      </div>
+      <div class="form-item">
+        <label for="regions-spoken" class="primary">Region(s) spoken</label>
+        <input type="text" id="regions-spoken" required/>
+      </div>
+      <div class="form-item">
+        <label for="number-of-speakers" class="primary">Number of speakers</label>
+        <input type="text" id="number-of-speakers" required/>
+      </div>
+      <div class="form-item">
+        <label for="threat-status" class="primary">Threat Status</label>
+        <select id="category">
+          <option value=" " disabled select></option>
+          <option value="endangered">Endangered</option>
+          <option value="seriously-endangered">Seriously endangered</option>
+          <option value="moribund">Moribund</option>
+          <option value="extinct">Extinct</option>
+        </select>
 
-    </form>
-    <button id="delete-all">delete All</button>
 
-    <h1>Endangered Languages</h1>
-    <p>Due to the impact of colonialism and globalisation, minority languages are threatened all over the world.</p>
-    <p>A language is considered to be extinct after its last speaker dies, which happens, on average, once every two weeks.</p>
-    <p>Use this app to track the data of endangered languages across the globe.</p>
+      </div>
+    </div>
+    <input type="submit" value="submit"/>
 
-    <div id="#endangered-languages"></div>
+  </form>
+  <button id="delete-all">delete All</button>
 
-  </body>
+  <h1>Endangered Languages</h1>
+  <p>Due to the impact of colonialism and globalisation, minority languages are threatened all over the world.</p>
+  <p>A language is considered to be extinct after its last speaker dies; an occurrence which happens, on average, once every two weeks.</p>
+  <p>Use this app to track the data of endangered languages across the globe.</p>
+
+  <div id="#endangered-languages"></div>
+
+</body>
 </html>

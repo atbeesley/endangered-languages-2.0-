@@ -1,6 +1,6 @@
 body {
  background-image: url("grunge-vintage-old-paper-background_1373-431.jpg");
- background-color: #cccccc;
+ background-color: #FFFFFF;
  background-repeat: no-repeat;
 background-size: cover;
 }
@@ -12,32 +12,4 @@ h1, h2, h3, p{
   width: 100%;
   display: flex;
   flex-direction: row;
-}
-
-.form-item {
-  margin-right: 1.8rem;
-}
-
-label.primary {
-  display: block;
-  margin: 0.4em 0;
-}
-
-
-button, input[type="submit"] {
-  margin-top: 1rem;
-}
-
-#reading-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-}
-
-.reading-list-item {
-  margin: 0.5rem 0.5rem;
-  padding: 0.5rem 0.8rem;
-  border: 1px solid #000000;
-  border-radius: 5%;
-  /* background: #ddeaff; */
 }
