@@ -10,8 +10,8 @@ const handleNewItemFormSubmit = function (event) {
   event.preventDefault();
 
   const endangeredLanguageItem = createEndangeredLanguageItem(event.target);
-  const endangeredLanguageList = document.querySelector('#endangered-languages-list');
-  endangeredLanguageList.appendChild(endangeredLanguageItem);
+  const endangeredLanguagesList = document.querySelector('#endangered-languages-list');
+  endangeredLanguagesList.appendChild(endangeredLanguageItem);
 
   event.target.reset();
 }
@@ -41,6 +41,6 @@ return endangeredLanguageItem;
 }
 
 const handleDeleteAllClick = function (event) {
-  const endangeredLanguageList = document.querySelector('#endangered-languages-list');
+  const endangeredLanguagesList = document.querySelector('#endangered-languages-list');
   endangeredLanguagesList.innerHTML = '';
 }
