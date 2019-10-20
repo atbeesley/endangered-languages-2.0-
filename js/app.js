@@ -9,34 +9,34 @@ document.addEventListener('DOMContentLoaded', () => {
 const handleNewItemFormSubmit = function (event) {
   event.preventDefault();
 
-  const endangeredLanguage = createEndangeredLanguage(event.target);
-  const endangeredLanguages = document.querySelector('#endangered-languages');
-  endangeredLanguages.appendChild(endangeredLanguage);
+  const languageName = createLanguageName(event.target);
+  const endangeredLanguages = document.querySelector('#language-name');
+  endangeredLanguages.appendChild(languageName);
 
   event.target.reset();
 }
 
-const createEndangeredLanguage = function (form) {
-  const endangeredLanguage = document.createElement('li')
-  endangeredLanguage.classList.add('#endangered-language')
+const createLanguageName = function (form) {
+  const languageName = document.createElement('li')
+  languageName.classList.add('#language-name')
 
 const classification = document.createElement('h2');
 classification.textContent = form.classification.value;
-endangeredLanguage.appendChild(classification);
+languageName.appendChild(classification);
 
 const regionsSpoken = document.createElement('h3');
 regionsSpoken.textContent = form.regionsSpoken.value;
-endangeredLanguage.appendChild(regionsSpoken);
+languageName.appendChild(regionsSpoken);
 
 const numberOfSpeakers = document.createElement('p');
 numberOfSpeakers.textContent = form.numberOfSpeakers.value;
-endangeredLanguage.appendChild(numberOfSpeakers);
+languageName.appendChild(numberOfSpeakers);
 
 const threatStatus = document.createElement('p');
 threatStatus.textContent = form.threatStatus.value;
-endangeredLanguage.appendChild(threatStatus);
+languageName.appendChild(threatStatus);
 
-return endangeredLanguage;
+return languageName;
 
 }
 
