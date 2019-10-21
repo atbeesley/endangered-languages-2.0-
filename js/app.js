@@ -17,14 +17,14 @@ const handleNewItemFormSubmit = function (event) {
 }
 
 const createEndangeredLanguageItem = function (form) {
-  const endangeredLanguageItem = document.createElement('li')
-  endangeredLanguageItem.classList.add('endangered-language-item')
+  const endangeredLanguageItem = document.createElement('h1')
+  endangeredLanguageItem.classList.add('endangeredLanguageItem')
 
 const classification = document.createElement('h2');
 classification.textContent = form.classification.value;
   endangeredLanguageItem.appendChild(classification);
 
-const regionsSpoken = document.createElement('h3');
+const regionsSpoken = document.createElement('p');
 regionsSpoken.textContent = form.regionsSpoken.value;
   endangeredLanguageItem.appendChild(regionsSpoken);
 
